@@ -1,0 +1,38 @@
+.pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+  }
+  
+  .inputContainer {
+    position: relative;
+  }
+  
+  .buscar {
+    width: 250px;
+    height: 40px;
+    border-radius: 55px;
+    padding-left: 10px;
+    border: 2px solid black;
+    outline: none;
+  }
+  
+  .lupa {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .custom-placeholder::placeholder {
+    padding-left: 10px; 
+  }
+  
+  .custom-placeholder {
+    padding-left: 10px;
+  }
+  
