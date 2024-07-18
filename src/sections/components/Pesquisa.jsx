@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../components/PesquisaStyles.module.css';
 import lupa from '../../assets/lupa.png';
 

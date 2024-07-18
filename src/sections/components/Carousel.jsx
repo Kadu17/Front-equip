@@ -18,7 +18,8 @@ export function EmblaCarousel() {
     setLoading(true);
     fetchProducts()
       .then((response) => {
-        setProducts(response);
+        console.log(response)
+        setProducts(response.results);
         setLoading(false);
       })
       .catch((error) => {

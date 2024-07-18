@@ -1,15 +1,28 @@
 // Função assíncrona que realiza uma requisição para obter produtos com base em uma consulta
-const fetchProducts = async (query) => {
+const fetchProducts = async (offset, limit) => {
     // Faz uma requisição para a API do Mercado Livre passando a consulta como parâmetro
+    if(offset && limit) {
+      const response = await fetch(
+        `https://api.mercadolibre.com/sites/MLB/search?seller_id=204455380&offset=${offset}&limit=${limit}`
+      );
+
+      const data = await response.json();
+      return data.results;
+    }
+
     const response = await fetch(
       `https://api.mercadolibre.com/sites/MLB/search?seller_id=204455380`
     );
+
+    const data = await response.json();
+    return data;
+   
   
     // Extrai os dados da resposta da requisição
-    const data = await response.json();
+   
   
     // Retorna os resultados dos produtos obtidos
-    return data.results;
+    
   };
   
   export default fetchProducts;

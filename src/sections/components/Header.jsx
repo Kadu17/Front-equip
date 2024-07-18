@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './HeaderStyles.module.css'
 import Logo from '../../assets/Logo.png'
 
