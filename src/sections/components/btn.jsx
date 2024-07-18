@@ -1,9 +1,10 @@
 import styles from './btnStyles.module.css'
+import { Link } from 'react-router-dom';
 
 function ButtonGroup() {
   return (
     <><div className={styles.buttonGroup}>
-      <button className={styles.button}>Produtos</button>
+      <Link to={"/produtos"} className={styles.button}>Produtos</Link>
       <button className={styles.button}>Sobre nós</button>
       <button className={styles.button}>Contate nós</button>
     </div>
