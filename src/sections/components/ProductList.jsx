@@ -1,25 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import ProductService from './ProductService';
+import { useState, useEffect } from 'react';
 import fetchProducts from '../../Api/fetchProducts';
+import "./ProductList.css"
+import Pagination from './Pagination';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const search = 'https://api.mercadolibre.com/sites/MLB/search?seller_id=204455380'; // Defina o termo de busca desejado
-  const offset = 0;  // Defina o offset desejado
-
+  const [currentPage, setCurrentPage] = useState(1)
+  const productsPerPage = 50
+  const totalPages =  Math.ceil(1000 / productsPerPage)
   useEffect(() => {
     setLoading(true);
-    fetchProducts()
+    const offSet = (currentPage - 1) * productsPerPage
+    fetchProducts(offSet, productsPerPage)
       .then((response) => {
-        setProducts(response);
+        setProducts(response.results);
         setLoading(false);
       })
       .catch((error) => {
         console.error('Erro ao buscar produtos:', error);
         setLoading(false);
       });
-  }, [search, offset]);
+  }, [currentPage]);
 
   if (loading) {
     return <div>Carregando...</div>;
@@ -28,15 +30,24 @@ const ProductList = () => {
   return (
     <div>
       <h1>Lista de Produtos</h1>
-      <ul>
+      <ul className='products-container'>
         {products.map((product) => (
-          <li key={product.id}>
+          <li key={product.id} className='product-item'>
             <h2>{product.title}</h2>
             <img src={product.thumbnail} alt={product.title} />
-            <p>Preço: {product.price}</p>
+            <div className='product-price-container'>
+              <span className='product-price'>R${product.price}</span>
+              <button className="View-product">
+                  Ver produto
+              </button>
+            </div>
           </li>
         ))}
       </ul>
+      <div className='pagination-container'> 
+      <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} products={products}/>
+      </div>
+      
     </div>
   );
 };
