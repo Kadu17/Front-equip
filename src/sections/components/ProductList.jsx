@@ -34,7 +34,10 @@ const ProductList = () => {
         {products.map((product) => (
           <li key={product.id} className='product-item'>
             <h2>{product.title}</h2>
+            <div>
             <img src={product.thumbnail} alt={product.title} />
+            </div>
+           
             <div className='product-price-container'>
               <span className='product-price'>R${product.price}</span>
               <button className="View-product">

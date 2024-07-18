@@ -7,7 +7,7 @@ const fetchProducts = async (offset, limit) => {
       );
 
       const data = await response.json();
-      return data.results;
+      return data;
     }
 
     const response = await fetch(
