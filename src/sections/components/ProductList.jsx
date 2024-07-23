@@ -40,7 +40,7 @@ const ProductList = () => {
             </div>
            
             <div className='product-price-container'>
-              <p>{product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+              {/* <p>{product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p> */}
               <Link to={"https://wa.me/c/5519997282358"} className="View-product-link">
                   <button className="View-product">
                     Ver produto

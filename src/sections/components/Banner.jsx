@@ -1,5 +1,5 @@
 import styles from './btnStyles.module.css'
-import Slogan from '../../assets/Slogan.jpg'
+import Slogan from '../../assets/grade.png'
 
 export default function Banner() {
   return (

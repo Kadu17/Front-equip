@@ -56,7 +56,7 @@ export function EmblaCarousel() {
                 </div>
                 <div className="product-info">
                   <h2>{product.title}</h2>
-                  <p>{product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                  {/* <p>{product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p> */}
                   <p>{product.description}</p>
                 </div>
                 <Link to={"https://wa.me/c/5519997282358"} className="View-product-link">
