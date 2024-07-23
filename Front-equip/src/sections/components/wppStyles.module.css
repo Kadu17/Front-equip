@@ -1,0 +1,14 @@
+.circulo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    position: relative; 
+    overflow: hidden;
+}
+
+.img {
+    cursor: pointer;
+    position: fixed; 
+    right: 10px; 
+    bottom: 10px; 
+}

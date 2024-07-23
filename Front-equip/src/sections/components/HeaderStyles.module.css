@@ -1,0 +1,31 @@
+.header{
+    height: 100px;
+    width: 100%;
+    background-color: black;
+}
+
+.logo{
+    height: 100px;
+    width: 25%;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .logo {
+        max-width: 50%; /* Ajusta o tamanho do logo em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 5px;
+    }
+
+    .logo {
+        max-width: 75%; /* Ajusta o tamanho do logo em telas muito pequenas */
+    }
+}
