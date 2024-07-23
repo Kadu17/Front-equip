@@ -1,12 +1,11 @@
 import './App.css'
-
 import Home from './pages/Home.jsx'
 import Products from './pages/Products.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
 function App() {
-  const router  =createBrowserRouter([
+  const router  = createBrowserRouter([
     {
       path: "/",
       element: <Home />,

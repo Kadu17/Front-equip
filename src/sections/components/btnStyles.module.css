@@ -28,4 +28,42 @@
   height: 500px;
   width: 100%;
 }
-  
+
+.buttonLink {
+  color: rgb(0, 0, 0); 
+  text-decoration: none; 
+}
+
+@media (max-width: 768px) {
+  .buttonGroup {
+      gap: 50px; /* Reduz o espaço entre os botões em telas menores */
+  }
+
+  .button {
+      padding: 8px 16px; /* Ajusta o padding dos botões em telas menores */
+      font-size: 14px; /* Ajusta o tamanho da fonte dos botões em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .buttonGroup {
+      gap: 20px; /* Reduz ainda mais o espaço entre os botões em telas muito pequenas */
+  }
+
+  .button {
+      padding: 6px 12px; /* Ajusta o padding dos botões em telas muito pequenas */
+      font-size: 12px; /* Ajusta o tamanho da fonte dos botões em telas muito pequenas */
+  }
+}
+
+@media (max-width: 768px) {
+  .slogan {
+    height: 300px; /* Ajuste a altura conforme necessário */
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan {
+    height: 200px; /* Ajuste a altura conforme necessário */
+  }
+}

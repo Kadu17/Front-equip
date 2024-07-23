@@ -5,7 +5,9 @@ import Wpp from '../../assets/whatsapp.png'
 function wpp() {
   return (
     <div className={Styles.circulo}>
-        <img className={Styles.img} src={Wpp} alt="" />
+        <a href="https://wa.me/+5519997282358" target="_blank" rel="noopener noreferrer">
+        <img className={Styles.img} src={Wpp} alt="WhatsApp" />
+      </a>
     </div>
   )
 }

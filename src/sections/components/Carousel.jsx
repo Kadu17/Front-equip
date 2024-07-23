@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import './Carousel.css';
 import fetchProducts from '../../Api/fetchProducts';
+import { Link } from 'react-router-dom';
 
 export function EmblaCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
@@ -58,9 +59,11 @@ export function EmblaCarousel() {
                   <p>{product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                   <p>{product.description}</p>
                 </div>
-                <button className="View-product">
-                  Ver produto
-                </button>
+                <Link to={"https://wa.me/c/5519997282358"} className="View-product-link">
+                  <button className="View-product">
+                    Ver produto
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

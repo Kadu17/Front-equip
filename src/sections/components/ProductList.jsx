@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import fetchProducts from '../../Api/fetchProducts';
 import "./ProductList.css"
 import Pagination from './Pagination';
+import { Link } from 'react-router-dom';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -39,10 +40,12 @@ const ProductList = () => {
             </div>
            
             <div className='product-price-container'>
-              <span className='product-price'>R${product.price}</span>
-              <button className="View-product">
-                  Ver produto
-              </button>
+              <p>{product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+              <Link to={"https://wa.me/c/5519997282358"} className="View-product-link">
+                  <button className="View-product">
+                    Ver produto
+                  </button>
+                </Link>
             </div>
           </li>
         ))}

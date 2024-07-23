@@ -89,7 +89,15 @@
   right: 5px;
 }
 
-.View-product{
+.View-product-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+
+.View-product {
   height: 50px;
   width: 50%;
   background-color: black;
@@ -98,5 +106,24 @@
   border-radius: 30px;
   cursor: pointer;
   border: transparent;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .embla__slide {
+    min-width: 50%; /* Dois itens por vez em telas médias */
+  }
+}
+
+@media (max-width: 480px) {
+  .embla__slide {
+    min-width: 100%; /* Um item por vez em telas pequenas */
+  }
+}
+
 

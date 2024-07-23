@@ -7,7 +7,7 @@ import Instagram from '../../assets/instagram.png'
 
 function Footer() {
   return (
-    <div className={Styles.footer}>
+    <div id='cnt-nos' className={Styles.footer}>
         <div className={Styles.titulo}>
           <div>
             <h2>Atendimento</h2>
@@ -26,8 +26,12 @@ function Footer() {
               <p>Siga-nos nas redes sociais.<br/> e fique por dentro de todas<br/> as novidades.</p>
             </div>
             <div className={Styles.icones}>
+            <a href="https://www.facebook.com/share/koJaLNjrThDjDV72/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
               <img src={Facebook} alt="" />
+            </a>
+            <a href="https://www.instagram.com/front_equip?igsh=OGhtZ2o0Y2dvc2Jk&utm_source=qr" target="_blank" rel="noopener noreferrer">
               <img src={Instagram} alt="" />
+            </a>
             </div>
           </div>
         </div>

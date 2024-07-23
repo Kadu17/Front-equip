@@ -35,4 +35,16 @@
   .custom-placeholder {
     padding-left: 10px;
   }
+
+  @media (max-width: 768px) {
+    .pesquisa {
+      margin: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .pesquisa {
+      margin: 20px;
+    }
+  }
   
