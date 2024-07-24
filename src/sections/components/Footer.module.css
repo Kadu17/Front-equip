@@ -65,7 +65,7 @@ h4 {
 
 @media (max-width: 480px) {
     .ImgGroup h4, .ImgGroup1 h4 {
-        font-size: 14px;
+        font-size: 7px;
     }
 
     .Img {

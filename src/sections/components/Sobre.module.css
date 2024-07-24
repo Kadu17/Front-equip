@@ -56,3 +56,20 @@
       font-size: 14px; /* Ajusta o tamanho da fonte em dispositivos muito pequenos */
     }
   }
+
+  @media (max-width: 450px) {
+    .sobre {
+      width: 90%;
+      padding: 10px;
+      border: 2px solid black; /* Garantir que a borda seja visível */
+      box-sizing: border-box;  /* Inclui a borda e o padding no tamanho total */
+    }
+  
+    .titulo {
+      font-size: 16px;
+    }
+  
+    .desc {
+      font-size: 12px;
+    }
+  }
